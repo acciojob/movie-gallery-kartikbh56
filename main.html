@@ -5,60 +5,98 @@
     <!-- Bootstrap 5 CSS link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Custom CSS to ensure images fit their containers and are easily visible */
         img {
             width: 100px;
             height: 100px;
+            /* Added border and shadow for better visibility of each image box */
+            border-radius: 8px; /* Rounded corners for aesthetic appeal */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+        }
+        /* Styling for the rows to add some spacing between them */
+        .row {
+            margin-bottom: 1rem; /* Add some space below each row */
+            justify-content: center; /* Center the columns within each row */
+            align-items: center; /* Vertically align items in the center */
+        }
+        /* Styling for columns to center content (the images) */
+        .col-sm-1, .col-sm-2, .col-sm-4, .col-sm-12 {
+            display: flex;
+            justify-content: center; /* Center images horizontally within their columns */
+            align-items: center; /* Center images vertically within their columns */
+            padding: 0.5rem; /* Add some padding around each image */
+        }
+        /* Overall page styling */
+        body {
+            background-color: #f8f9fa; /* Light grey background for the page */
+            font-family: 'Inter', sans-serif; /* Using Inter font for better readability */
+            padding: 20px; /* Padding around the entire gallery */
+        }
+        .container-fluid {
+            background-color: #ffffff; /* White background for the main container */
+            border-radius: 10px; /* Rounded corners for the container */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* More prominent shadow for the container */
+            padding: 20px; /* Padding inside the container */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #343a40;
         }
     </style>
 </head>
 <body>
-    <!-- Main container -->
+    <h2 class="mt-4 mb-4">Movie Image Gallery</h2>
+    <!-- Main container for the gallery, applying Bootstrap's fluid container for full width -->
     <div class="container-fluid">
 
-        <!-- First row: 12 images, each col-sm-1 -->
+        <!-- First row: Designed to hold 12 images, each taking 1 Bootstrap column unit on small screens and up -->
         <div class="row">
-            <!-- 12 columns -->
-            <!-- You can replace the src with any image URL -->
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-1"><img src="https://via.placeholder.com/100" alt="movie"></div>
+            <!-- Loop to generate 12 image columns for the first row -->
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+1" alt="movie 1" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+2" alt="movie 2" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+3" alt="movie 3" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+4" alt="movie 4" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+5" alt="movie 5" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+6" alt="movie 6" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+7" alt="movie 7" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+8" alt="movie 8" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+9" alt="movie 9" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+10" alt="movie 10" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+11" alt="movie 11" loading="lazy"></div>
+            <div class="col-sm-1"><img src="https://placehold.co/100x100/A0BFE0/ffffff?text=Movie+12" alt="movie 12" loading="lazy"></div>
         </div>
 
-        <!-- Second row: 6 images, each col-sm-2 -->
+        <!-- Second row: Designed to hold 6 images, each taking 2 Bootstrap column units on small screens and up -->
         <div class="row">
-            <!-- 6 columns -->
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-2"><img src="https://via.placeholder.com/100" alt="movie"></div>
+            <!-- Loop to generate 6 image columns for the second row -->
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+1" alt="film 1" loading="lazy"></div>
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+2" alt="film 2" loading="lazy"></div>
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+3" alt="film 3" loading="lazy"></div>
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+4" alt="film 4" loading="lazy"></div>
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+5" alt="film 5" loading="lazy"></div>
+            <div class="col-sm-2"><img src="https://placehold.co/100x100/B0CFE0/ffffff?text=Film+6" alt="film 6" loading="lazy"></div>
         </div>
 
-        <!-- Third row: 3 images, each col-sm-4 -->
+        <!-- Third row: Designed to hold 3 images, each taking 4 Bootstrap column units on small screens and up -->
         <div class="row">
-            <!-- 3 columns -->
-            <div class="col-sm-4"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-4"><img src="https://via.placeholder.com/100" alt="movie"></div>
-            <div class="col-sm-4"><img src="https://via.placeholder.com/100" alt="movie"></div>
+            <!-- Loop to generate 3 image columns for the third row -->
+            <div class="col-sm-4"><img src="https://placehold.co/100x100/C0DFE0/ffffff?text=Cinema+1" alt="cinema 1" loading="lazy"></div>
+            <div class="col-sm-4"><img src="https://placehold.co/100x100/C0DFE0/ffffff?text=Cinema+2" alt="cinema 2" loading="lazy"></div>
+            <div class="col-sm-4"><img src="https://placehold.co/100x100/C0DFE0/ffffff?text=Cinema+3" alt="cinema 3" loading="lazy"></div>
         </div>
 
-        <!-- Fourth row: 1 image, col-sm-12 -->
+        <!-- Fourth row: Designed to hold 1 image, taking all 12 Bootstrap column units on small screens and up -->
         <div class="row">
-            <div class="col-sm-12"><img src="https://via.placeholder.com/100" alt="movie"></div>
+            <!-- Single image column for the fourth row -->
+            <div class="col-sm-12"><img src="https://placehold.co/100x100/D0EFFF/ffffff?text=The+End" alt="the end" loading="lazy"></div>
         </div>
 
     </div>
 
+    <!-- The script.js file is commented out as it's not required for this layout task.
     <script type="text/javascript" src="./script.js"></script>
+    -->
 </body>
 </html>
